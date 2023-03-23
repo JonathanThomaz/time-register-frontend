@@ -29,7 +29,7 @@ const Home = () => {
   };
 
   const renderInsertCode = () => {
-    if (result.length !== 0) return <TimeRegister array={result} />;
+    if (result?.length !== 0) return <TimeRegister array={result} />;
     return (
       <>
         <Title>
