@@ -23,7 +23,7 @@ export const Content = styled.div`
 `;
 export const Title = styled.span`
   font-size: 1.3rem;
-  strong {
+  * {
     font-size: 1.3rem;
   }
 `;
