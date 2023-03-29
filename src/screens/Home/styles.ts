@@ -21,9 +21,3 @@ export const Content = styled.div`
   flex-direction: column;
   gap: 1rem;
 `;
-export const Title = styled.span`
-  font-size: 1.3rem;
-  * {
-    font-size: 1.3rem;
-  }
-`;
