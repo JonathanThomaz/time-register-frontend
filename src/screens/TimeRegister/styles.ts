@@ -1,18 +1,5 @@
 import styled from 'styled-components';
 
-export const TimeRegisterContainer = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 13px;
-  background: rgba(217, 217, 217, 0.05);
-  border-radius: 4px;
-  span,
-  span * {
-    font-size: 12px;
-  }
-`;
 export const Container = styled.div`
   width: 100%;
   display: flex;
@@ -22,9 +9,38 @@ export const Container = styled.div`
   gap: 7px;
   border-radius: 4px;
 `;
+export const Header = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  * {
+    font-size: 12px;
+  }
+`;
+export const User = styled.div`
+  width: fit-content;
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  justify-content: space-between;
+  span {
+    color: ${({ theme }) => theme.colors.text}=>;
+  }
+`;
 
-export const Title = styled.span`
-  font-weight: 700;
-  font-size: 12px;
-  color: ${({ theme }) => theme.colors.grey};
+export const Hours = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-bottom: 18px;
+  padding-top: 10px;
+`;
+interface IStrong {
+  size: string;
+}
+export const Strong = styled.strong<IStrong>`
+  font-size: ${({ size }) => size};
 `;

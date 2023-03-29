@@ -1,34 +1,27 @@
 import React from 'react';
-import { ITimeRegister } from 'interfaces';
-import { format, intervalToDuration } from 'date-fns';
-import { Container, TimeRegisterContainer, Title } from './styles';
-interface ITimeRegisterScreen {
-  array: ITimeRegister[];
-}
-export const TimeRegister = ({ array = [] }: ITimeRegisterScreen) => {
-  const renderItems = () => {
-    return array.map(item => {
-      const duration = intervalToDuration({
-        start: new Date(item.startDateTime),
-        end: new Date(item.endDateTime)
-      });
-      return (
-        <TimeRegisterContainer key={`${item.id}`}>
-          <span>{format(new Date(item.startDateTime), 'ee/MM/yy')}</span>
-          <span>
-            <strong>
-              {duration.hours}h {duration.minutes}m
-            </strong>
-          </span>
-        </TimeRegisterContainer>
-      );
-    });
-  };
+import { Container, Header, Hours, Strong, User } from './styles';
+import { BeforeDays } from './components';
+import { Button } from 'components';
+import { getTime } from './functions/index';
 
+const TimeRegister = () => {
   return (
     <Container>
-      <Title>Dias anteriores</Title>
-      {renderItems()}
+      <Header>
+        <strong>Relógio de ponto</strong>
+        <User>
+          <strong>#userCode</strong>
+          <span>Usuário</span>
+        </User>
+      </Header>
+      <Hours>
+        <Strong size="24px">{getTime('', '')}</Strong>
+        <Strong size="12px">Horas de hoje</Strong>
+      </Hours>
+      <Button>Teste</Button>
+      <BeforeDays />
     </Container>
   );
 };
+
+export default TimeRegister;
