@@ -18,7 +18,7 @@ const TimeRegister = () => {
         <Strong size="24px">{getTime('', '')}</Strong>
         <Strong size="12px">Horas de hoje</Strong>
       </Hours>
-      <Button>Teste</Button>
+      <Button>{'Hora de entrada'}</Button>
       <BeforeDays />
     </Container>
   );
