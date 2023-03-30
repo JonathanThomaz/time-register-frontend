@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 100%;
+  width: -webkit-fill-available;
   background-color: ${({ theme }) => theme.colors.secondary};
   padding: 8px 14px;
   border-radius: 4px;
@@ -10,7 +10,7 @@ export const Container = styled.div`
     font-size: 12px;
   }
   input {
-    width: 100%;
+    width: -webkit-fill-available;
     background: transparent;
     outline: none;
     border: none;

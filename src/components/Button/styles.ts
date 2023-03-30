@@ -3,8 +3,8 @@ interface IButtonContainer {
   isActive: boolean;
 }
 export const ButtonContainer = styled.div<IButtonContainer>`
+  width: -webkit-fill-available;
   background: linear-gradient(124.18deg, #fe8a00 22.06%, #fe8a00 81.62%);
-  width: 100%;
   text-align: center;
   padding: 0 14px;
   button {
